@@ -52,6 +52,8 @@ h1, h2, h3 {
   font-family: 'Caveat', cursive;
   color: var(--basilico);
   transform: rotate(-2deg);
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
 .wrap {
@@ -202,6 +204,50 @@ section {
   display: block;
 }
 
+/* Chi Sono Section */
+#chi-sono {
+  padding: 4rem 0;
+}
+
+.chi-sono__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.chi-sono__image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chi-sono__image-container {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.chi-sono__image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.chi-sono__content h2 {
+  font-size: var(--t-xl);
+  margin-bottom: 1.5rem;
+}
+
+.chi-sono__content p {
+  font-size: var(--t-m);
+  margin-bottom: 1.5rem;
+  max-width: 45ch; /* Ancho de línea por debajo de 70 caracteres */
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .home__grid {
@@ -220,5 +266,14 @@ section {
   .home__image {
     max-width: 300px;
     margin: 0 auto;
+  }
+
+  .chi-sono__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .chi-sono__content p {
+    max-width: 100%;
   }
 }
