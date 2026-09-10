@@ -401,6 +401,39 @@ section {
   color: var(--inchiostro);
 }
 
+/* Prenota Section */
+#prenota {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+#prenota h2 {
+  font-size: var(--t-xl);
+  margin-bottom: 1.5rem;
+}
+
+#prenota > .wrap > p {
+  font-size: var(--t-m);
+  margin-bottom: 2rem;
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prenota-block {
+  border: 2px solid var(--inchiostro);
+  padding: 2rem;
+  display: inline-block;
+  border-radius: 8px;
+  background-color: rgba(251, 250, 247, 0.5);
+}
+
+.prenota-block p {
+  font-family: 'Fraunces', serif;
+  font-size: var(--t-l);
+  font-weight: 600;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .home__grid {
