@@ -1,0 +1,10 @@
+
+Wait, I should check the conventions again. "Todo el JS en js/main.js". "Nada embebido en el HTML".
+The user asked to "continua con js/main.js".
+I will output the file listing now.
+
+One detail: The prompt asks for "interactividad básica". Smooth scroll and form mock are good.
+I will add comments explaining the logic in Spanish as requested ("Reply in spanish").
+
+Final check on format:
+path/to/filename.js
