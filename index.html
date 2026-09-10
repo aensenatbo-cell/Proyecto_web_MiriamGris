@@ -3,34 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto</title>
+    <title>Il Mio Progetto - (O quasi)</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>Il Mio Progetto</h1>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Il Mio Progetto</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#chi-siamo">Chi siamo</a></li>
+                    <li><a href="#servizi">Servizi</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Chi siamo</a></li>
-                <li><a href="#">Contatti</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <img src="https://picsum.photos/seed/seed1/400/300" alt="Imagen 1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <img src="https://picsum.photos/seed/seed2/400/300" alt="Imagen 2">
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <img src="https://picsum.photos/seed/seed3/400/300" alt="Imagen 3">
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Benvenuti nel caos</h2>
+                <p>Facciamo cose. A volte funzionano. Magari.</p>
+                <a href="#contatti" class="btn">Parliamone (se ho tempo)</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://picsum.photos/seed/hero/800/600" alt="Qualcosa di astratto">
+            </div>
+        </section>
+
+        <!-- Chi Siamo -->
+        <section id="chi-siamo" class="about">
+            <div class="container">
+                <h3>Chi siamo (o meglio, chi ci prova)</h3>
+                <div class="about-content">
+                    <div class="text">
+                        <p>Siamo un team di professionisti... occasionali. La nostra missione è confondere i clienti con eleganza.</p>
+                        <p>Non chiedeteci il perché. Chiedeteci il come. O meglio, non chiedeteci nulla.</p>
+                    </div>
+                    <div class="image">
+                        <img src="https://picsum.photos/seed/team/500/400" alt="Team che finge di lavorare">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servizi -->
+        <section id="servizi" class="services">
+            <div class="container">
+                <h3>I nostri servizi (speriamo)</h3>
+                <div class="cards">
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/service1/300/200" alt="Servizio 1">
+                        <h4>Consulenza</h4>
+                        <p>Consigliamo cose che già sapevi, ma in modo più costoso.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/service2/300/200" alt="Servizio 2">
+                        <h4>Sviluppo</h4>
+                        <p>Scriviamo codice. O forse no. Dipende dal caffè.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/service3/300/200" alt="Servizio 3">
+                        <h4>Marketing</h4>
+                        <p>Gridiamo forte su internet finché qualcuno non ci ascolta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contatti -->
+        <section id="contatti" class="contact">
+            <div class="container">
+                <h3>Contattaci (se ti va)</h3>
+                <form class="contact-form">
+                    <input type="text" placeholder="Il tuo nome (o pseudonimo)">
+                    <input type="email" placeholder="La tua email (speriamo)">
+                    <textarea placeholder="Scrivi qui le tue lamentele o complimenti"></textarea>
+                    <button type="submit">Invia (e speriamo di no)</button>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Il Mio Progetto. Todos los derechos reservados (o casi).</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2023 Il Mio Progetto. Todos los derechos reservados (o quasi).</p>
+            <p>Fatto con amore e un po' di confusione.</p>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
