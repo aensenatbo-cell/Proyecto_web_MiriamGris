@@ -3,25 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Mio Progetto - (O quasi)</title>
+    <title>Il Mio Progetto - Soluzioni Digitali (O quasi)</title>
+    <meta name="description" content="Un'agenzia digitale che trasforma le vostre idee in realtà, a volte con un po' di caos creativo.">
+    <meta name="keywords" content="web design, sviluppo, marketing, creatività, consulenza">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.example.com/">
+    <meta property="og:title" content="Il Mio Progetto - Soluzioni Digitali">
+    <meta property="og:description" content="Trasformiamo il caos in ordine. O almeno proviamo.">
+    <meta property="og:image" content="https://picsum.photos/seed/og-image/1200/630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.example.com/">
+    <meta property="twitter:title" content="Il Mio Progetto - Soluzioni Digitali">
+    <meta property="twitter:description" content="Trasformiamo il caos in ordine. O almeno proviamo.">
+    <meta property="twitter:image" content="https://picsum.photos/seed/og-image/1200/630">
+
     <link rel="stylesheet" href="css/styles.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="site-header">
-        <div class="container">
+<body class="js-scroll-reveal">
+    <header class="site-header" id="header">
+        <div class="container header-container">
             <div class="logo">
-                <h1>Il Mio Progetto</h1>
+                <a href="#home">
+                    <h1>Il Mio Progetto</h1>
+                </a>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#chi-siamo">Chi siamo</a></li>
-                    <li><a href="#servizi">Servizi</a></li>
-                    <li><a href="#contatti">Contatti</a></li>
+            <nav class="main-nav" aria-label="Navigazione principale">
+                <button class="mobile-menu-toggle" aria-label="Apri menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#chi-siamo" class="nav-link">Chi siamo</a></li>
+                    <li><a href="#servizi" class="nav-link">Servizi</a></li>
+                    <li><a href="#testimonianze" class="nav-link">Testimonianze</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contatti" class="btn btn-primary">Contatti</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,74 +56,247 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
-            <div class="hero-content">
-                <h2>Benvenuti nel caos</h2>
-                <p>Facciamo cose. A volte funzionano. Magari.</p>
-                <a href="#contatti" class="btn">Parliamone (se ho tempo)</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://picsum.photos/seed/hero/800/600" alt="Qualcosa di astratto">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h2>Benvenuti nel caos creativo</h2>
+                    <p class="hero-subtitle">Facciamo cose. A volte funzionano. Magari. Soluzioni digitali per chi non ha paura di osare.</p>
+                    <div class="hero-actions">
+                        <a href="#contatti" class="btn btn-primary">Parliamone (se ho tempo)</a>
+                        <a href="#servizi" class="btn btn-secondary">Scopri i servizi</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/hero/800/600" alt="Abstract digital art representing chaos and order" loading="eager">
+                </div>
             </div>
         </section>
 
         <!-- Chi Siamo -->
-        <section id="chi-siamo" class="about">
+        <section id="chi-siamo" class="about section-padding">
             <div class="container">
-                <h3>Chi siamo (o meglio, chi ci prova)</h3>
+                <div class="section-header">
+                    <h3>Chi siamo (o meglio, chi ci prova)</h3>
+                    <p class="section-desc">La nostra missione è confondere i clienti con eleganza e professionalità occasionale.</p>
+                </div>
                 <div class="about-content">
                     <div class="text">
-                        <p>Siamo un team di professionisti... occasionali. La nostra missione è confondere i clienti con eleganza.</p>
-                        <p>Non chiedeteci il perché. Chiedeteci il come. O meglio, non chiedeteci nulla.</p>
+                        <p>Siamo un team di professionisti... occasionali. Crediamo che la perfezione sia noiosa, ma la qualità sia obbligatoria (a volte).</p>
+                        <p>Non chiedeteci il perché. Chiedeteci il come. O meglio, non chiedeteci nulla finché non abbiamo preso il caffè.</p>
+                        <ul class="features-list">
+                            <li>✓ Innovazione costante</li>
+                            <li>✓ Caffè illimitato</li>
+                            <li>✓ Scuse preparate in anticipo</li>
+                        </ul>
                     </div>
                     <div class="image">
-                        <img src="https://picsum.photos/seed/team/500/400" alt="Team che finge di lavorare">
+                        <img src="https://picsum.photos/seed/team/500/400" alt="Team che finge di lavorare intensamente" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Servizi -->
-        <section id="servizi" class="services">
+        <section id="servizi" class="services section-padding bg-light">
             <div class="container">
-                <h3>I nostri servizi (speriamo)</h3>
-                <div class="cards">
-                    <div class="card">
-                        <img src="https://picsum.photos/seed/service1/300/200" alt="Servizio 1">
-                        <h4>Consulenza</h4>
-                        <p>Consigliamo cose che già sapevi, ma in modo più costoso.</p>
+                <div class="section-header">
+                    <h3>I nostri servizi (speriamo)</h3>
+                    <p class="section-desc">Cosa facciamo? Beh, proviamo a fare tutto.</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="card service-card">
+                        <div class="card-icon">
+                            <img src="https://picsum.photos/seed/icon1/64/64" alt="Icona consulenza">
+                        </div>
+                        <h4>Consulenza Strategica</h4>
+                        <p>Consigliamo cose che già sapevi, ma in modo più costoso e con più slide PowerPoint.</p>
                     </div>
-                    <div class="card">
-                        <img src="https://picsum.photos/seed/service2/300/200" alt="Servizio 2">
-                        <h4>Sviluppo</h4>
-                        <p>Scriviamo codice. O forse no. Dipende dal caffè.</p>
+                    <div class="card service-card">
+                        <div class="card-icon">
+                            <img src="https://picsum.photos/seed/icon2/64/64" alt="Icona sviluppo">
+                        </div>
+                        <h4>Sviluppo Web</h4>
+                        <p>Scriviamo codice. O forse no. Dipende dal caffè e dalla luna. Ma il sito funziona (speriamo).</p>
                     </div>
-                    <div class="card">
-                        <img src="https://picsum.photos/seed/service3/300/200" alt="Servizio 3">
-                        <h4>Marketing</h4>
-                        <p>Gridiamo forte su internet finché qualcuno non ci ascolta.</p>
+                    <div class="card service-card">
+                        <div class="card-icon">
+                            <img src="https://picsum.photos/seed/icon3/64/64" alt="Icona marketing">
+                        </div>
+                        <h4>Marketing & Branding</h4>
+                        <p>Gridiamo forte su internet finché qualcuno non ci ascolta. O ci blocca. Comunque, visibilità.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contatti -->
-        <section id="contatti" class="contact">
+        <!-- Testimonianze (NUEVA) -->
+        <section id="testimonianze" class="testimonials section-padding">
             <div class="container">
-                <h3>Contattaci (se ti va)</h3>
-                <form class="contact-form">
-                    <input type="text" placeholder="Il tuo nome (o pseudonimo)">
-                    <input type="email" placeholder="La tua email (speriamo)">
-                    <textarea placeholder="Scrivi qui le tue lamentele o complimenti"></textarea>
-                    <button type="submit">Invia (e speriamo di no)</button>
-                </form>
+                <div class="section-header">
+                    <h3>Cosa dicono di noi (loro)</h3>
+                    <p class="section-desc">Non siamo noi a dirlo, sono loro. E forse sono di parte.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="quote">"Il Mio Progetto ha trasformato il mio business. O almeno mi ha fatto sentire meglio mentre andava in rovina."</p>
+                        <div class="author">
+                            <img src="https://picsum.photos/seed/user1/100/100" alt="Foto di Mario Rossi" loading="lazy">
+                            <div class="author-info">
+                                <h5>Mario Rossi</h5>
+                                <span>CEO di Fuffa Srl</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="quote">"Professionali, puntuali e sempre pronti a dire 'ci pensiamo domani'. Consigliatissimi."</p>
+                        <div class="author">
+                            <img src="https://picsum.photos/seed/user2/100/100" alt="Foto di Giulia Bianchi" loading="lazy">
+                            <div class="author-info">
+                                <h5>Giulia Bianchi</h5>
+                                <span>Freelance Creativa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="quote">"Il sito è bellissimo. Funziona? Beh, a volte. Ma è bello."</p>
+                        <div class="author">
+                            <img src="https://picsum.photos/seed/user3/100/100" alt="Foto di Luca Verdi" loading="lazy">
+                            <div class="author-info">
+                                <h5>Luca Verdi</h5>
+                                <span>Imprenditore Digitale</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ (NUEVA) -->
+        <section id="faq" class="faq section-padding bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Domande Frequenti (o quasi)</h3>
+                    <p class="section-desc">Le domande che ci fate spesso, e le risposte che diamo spesso.</p>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Quanto costano i vostri servizi?</summary>
+                        <div class="faq-content">
+                            <p>Dipende. Se è un progetto semplice, forse poco. Se è complesso, beh, preparate il portafoglio. Chiedeteci un preventivo e vi diremo "ci pensiamo".</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Quanto tempo ci volete mettere?</summary>
+                        <div class="faq-content">
+                            <p>Il tempo necessario per farlo bene. O il tempo necessario per farvi capire che non si può fare bene. Dipende dalla pazienza.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Posso cambiare idea a metà progetto?</summary>
+                        <div class="faq-content">
+                            <p>Assolutamente sì! Anzi, lo aspettiamo. Ma sappiate che ogni cambio costa un caffè extra.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Avete un portfolio?</summary>
+                        <div class="faq-content">
+                            <p>Sì, ma è un po' imbarazzante. Lo stiamo "rivedendo". Nel frattempo, guardate le foto e immaginate il meglio.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Intermedio (NUEVA) -->
+        <section class="cta-strip section-padding">
+            <div class="container">
+                <h3>Pronti a iniziare il caos?</h3>
+                <p>Non aspettiamo più. Contattaci oggi stesso e scopriremo insieme se possiamo aiutarvi (o no).</p>
+                <a href="#contatti" class="btn btn-primary btn-large">Inizia Ora</a>
+            </div>
+        </section>
+
+        <!-- Contatti -->
+        <section id="contatti" class="contact section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Contattaci (se ti va)</h3>
+                    <p class="section-desc">Compila il modulo e speriamo di risponderti prima della prossima scadenza.</p>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <h4>Indirizzo</h4>
+                            <p>Via del Caos 123, Roma (o quasi)</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@ilmioprogetto.it">info@ilmioprogetto.it</a></p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Telefono</h4>
+                            <p><a href="tel:+390123456789">+39 012 345 6789</a></p>
+                        </div>
+                    </div>
+                    <form class="contact-form js-contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Il tuo nome (o pseudonimo)" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" id="email" name="email" placeholder="La tua email (speriamo)" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Messaggio</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Scrivi qui le tue lamentele o complimenti" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Invia (e speriamo di no)</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2023 Il Mio Progetto. Todos los derechos reservados (o quasi).</p>
-            <p>Fatto con amore e un po' di confusione.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Il Mio Progetto</h4>
+                    <p>Facciamo cose. A volte funzionano. Magari.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Link Rapidi</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#chi-siamo">Chi siamo</a></li>
+                        <li><a href="#servizi">Servizi</a></li>
+                        <li><a href="#contatti">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Legale</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Termini e Condizioni</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Il Mio Progetto. Todos los derechos reservados (o quasi).</p>
+                <p>Fatto con amore e un po' di confusione.</p>
+                <a href="#home" class="back-to-top" aria-label="Torna su">↑</a>
+            </div>
         </div>
     </footer>
 
