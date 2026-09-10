@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  /* Colores */
+  --gesso: #FBFAF7;
+  --inchiostro: #1C2321;
+  --pomodoro: #E24E38;
+  --basilico: #3B6E4F;
+  --limone: #F2C14E;
+  --cemento: #C9C5BC;
+
+  /* Escala tipográfica */
+  --t-xs: 0.875rem;
+  --t-s: 1rem;
+  --t-m: 1.25rem;
+  --t-l: 2rem;
+  --t-xl: 3rem;
+  --t-xxl: 4.5rem;
+}
+
+/* Body */
+body {
+  background-color: var(--gesso);
+  color: var(--inchiostro);
+  font-family: 'Instrument Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'WONK' 1, 'SOFT' 20;
+  line-height: 1.1;
+}
+
+/* Clases utilitarias */
+.nota {
+  font-family: 'Caveat', cursive;
+  color: var(--basilico);
+  transform: rotate(-2deg);
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
