@@ -63,6 +63,23 @@ h1, h2, h3 {
   padding-right: 1.5rem;
 }
 
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--pomodoro);
+  color: var(--gesso);
+  padding: 0.5rem 1rem;
+  z-index: 2000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* Header */
 .header {
   position: fixed;
@@ -569,6 +586,33 @@ section {
 .footer__legal {
   font-size: var(--t-xs);
   opacity: 0.6;
+}
+
+/* Text selection */
+::selection {
+  background-color: var(--limone);
+  color: var(--inchiostro);
+}
+
+/* Focus styles for interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--pomodoro);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* Responsive */
