@@ -18,6 +18,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
   // Active link highlighting using IntersectionObserver
   const sections = document.querySelectorAll('section[id]');
   
@@ -60,6 +76,20 @@ document.addEventListener('DOMContentLoaded', () => {
     window.formspree('initForm', { 
       formElement: '#collaborazioniForm', 
       formId: 'xqpknnyr' 
+    });
+  }
+
+  // Mock form submission for #collaborazioni (simulated)
+  const form = document.getElementById('collaborazioniForm');
+  const successMessage = document.getElementById('formSuccessMessage');
+  
+  if (form && !window.formspree) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (successMessage) {
+        successMessage.style.display = 'block';
+        form.reset();
+      }
     });
   }
 });
