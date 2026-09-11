@@ -61,4 +61,52 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(section => {
     observer.observe(section);
   });
+
+  // Form validation for collaborazioniForm
+  const form = document.getElementById('collaborazioniForm');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Clear previous errors
+      document.querySelectorAll('.form-error').forEach(el => el.textContent = '');
+      const feedback = document.getElementById('form-feedback');
+      if (feedback) {
+        feedback.setAttribute('hidden', '');
+      }
+
+      const nome = form.querySelector('#nome').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      const messaggio = form.querySelector('#messaggio').value.trim();
+
+      let isValid = true;
+
+      // Validate nome
+      if (!nome) {
+        document.getElementById('error-nome').textContent = 'Il campo nome è obbligatorio.';
+        isValid = false;
+      }
+
+      // Validate email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !emailRegex.test(email)) {
+        document.getElementById('error-email').textContent = 'Inserisci un indirizzo email valido.';
+        isValid = false;
+      }
+
+      // Validate messaggio
+      if (!messaggio) {
+        document.getElementById('error-messaggio').textContent = 'Il campo messaggio è obbligatorio.';
+        isValid = false;
+      }
+
+      if (isValid) {
+        // Show feedback message
+        if (feedback) {
+          feedback.textContent = 'Grazie! La funzione di invio sarà attiva a breve.';
+          feedback.removeAttribute('hidden');
+        }
+      }
+    });
+  }
 });
