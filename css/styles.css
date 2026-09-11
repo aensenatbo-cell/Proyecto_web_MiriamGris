@@ -481,6 +481,34 @@ section {
   font-weight: 600;
 }
 
+/* Donazioni Section */
+#offrimi-una-fanta {
+  padding: 4rem 0;
+}
+
+.donazioni__content {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--gesso);
+  border: 1px solid var(--cemento);
+  border-radius: 4px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.donazioni__content h2 {
+  font-size: var(--t-xl);
+  margin-bottom: 0.5rem;
+}
+
+.donazioni__content p {
+  font-size: var(--t-m);
+  max-width: 50ch;
+}
+
 /* Collaborazioni Section */
 #collaborazioni {
   background-color: var(--gesso);
@@ -684,5 +712,9 @@ textarea:focus-visible {
 @media (max-width: 480px) {
   .video-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .donazioni__content {
+    padding: 1.5rem;
   }
 }
