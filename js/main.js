@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Mobile menu toggle
   const toggle = document.querySelector('.header__menu-toggle');
   const nav = document.querySelector('.header__nav');
   const links = nav ? nav.querySelectorAll('a') : [];
@@ -79,17 +80,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mock form submission for #collaborazioni (simulated)
+  // Fallback mock form submission if Formspree script fails or is disabled
   const form = document.getElementById('collaborazioniForm');
   const successMessage = document.getElementById('formSuccessMessage');
   
-  if (form && !window.formspree) {
+  if (form && successMessage) {
     form.addEventListener('submit', (e) => {
+      // Only apply mock if Formspree didn't handle it
+      if (window.formspree) return;
+      
       e.preventDefault();
-      if (successMessage) {
-        successMessage.style.display = 'block';
-        form.reset();
-      }
+      successMessage.style.display = 'block';
+      form.reset();
     });
   }
 });
