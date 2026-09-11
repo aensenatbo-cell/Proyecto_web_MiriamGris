@@ -103,10 +103,20 @@ h1, h2, h3 {
   color: var(--inchiostro);
   text-decoration: none;
   transition: color 0.2s ease;
+  position: relative;
 }
 
 .header__nav a:hover {
   color: var(--pomodoro);
+}
+
+/* Active link style */
+.header__nav a.attivo {
+  color: var(--inchiostro);
+  text-decoration: underline;
+  text-decoration-color: var(--limone);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
 }
 
 /* Mobile menu toggle */

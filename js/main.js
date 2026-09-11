@@ -17,4 +17,31 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Active link highlighting
+  const sections = document.querySelectorAll('section[id]');
+  
+  const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -80% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        links.forEach(link => {
+          link.classList.remove('attivo');
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('attivo');
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
 });
