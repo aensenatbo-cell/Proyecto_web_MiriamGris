@@ -184,7 +184,36 @@
             </div>
         </section>
 
-        <section id="collaborazioni" style="height: 100vh; background: #aaa;">Collabora</section>
+        <section id="collaborazioni">
+            <div class="wrap collaborazioni__content">
+                <h2>Collaborazioni</h2>
+                <p>Collaboriamo con brand di cura personale, cucina, casa, benessere e prodotti per neonati che condividono i nostri valori di autenticità.</p>
+                
+                <a href="media-kit.pdf" class="btn btn--primary">Scarica il media kit</a>
+                <!-- TODO: añadir el PDF del media kit a la raíz del proyecto -->
+
+                <form action="#" class="collaborazioni__form">
+                    <!-- TODO: sustituir por el endpoint de Formspree -->
+                    <div class="collaborazioni__form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="collaborazioni__form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="collaborazioni__form-group">
+                        <label for="azienda">Azienda</label>
+                        <input type="text" id="azienda" name="azienda">
+                    </div>
+                    <div class="collaborazioni__form-group">
+                        <label for="messaggio">Messaggio</label>
+                        <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Invia</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
