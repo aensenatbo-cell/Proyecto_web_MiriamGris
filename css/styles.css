@@ -811,3 +811,20 @@ textarea:focus-visible {
     padding: 1.5rem;
   }
 }
+
+/* Blog Dettaglio Section */
+#blog-dettaglio {
+    padding: 4rem 0;
+}
+
+#blog-dettaglio h2 {
+    font-size: var(--t-xl);
+    margin-bottom: 1rem;
+}
+
+.blog-dettaglio__subtitle {
+    font-size: var(--t-m);
+    margin-bottom: 2rem;
+    color: var(--inchiostro);
+    opacity: 0.8;
+}
