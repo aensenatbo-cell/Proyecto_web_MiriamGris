@@ -73,25 +73,33 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initialize Formspree form
-  if (window.formspree) {
+  const formElement = document.getElementById('collaborazioniForm');
+  if (formElement && window.formspree) {
     window.formspree('initForm', { 
-      formElement: '#collaborazioniForm', 
-      formId: 'xqpknnyr' 
+      formElement: formElement, 
+      formId: 'xqpknnyr',
+      onSuccess: (form) => {
+        // The library automatically handles showing the success message
+        // via the data-fs-success attribute.
+        // We can add custom logic here if needed, e.g., logging.
+        console.log('Form submitted successfully!');
+      },
+      onError: (form, errors) => {
+        // The library automatically handles showing error messages
+        // via the data-fs-error attributes.
+        console.error('Form submission failed:', errors);
+      }
     });
-  }
-
-  // Fallback mock form submission if Formspree script fails or is disabled
-  const form = document.getElementById('collaborazioniForm');
-  const successMessage = document.getElementById('formSuccessMessage');
-  
-  if (form && successMessage) {
-    form.addEventListener('submit', (e) => {
-      // Only apply mock if Formspree didn't handle it
-      if (window.formspree) return;
-      
+  } else if (formElement) {
+    // Fallback if Formspree script fails to load
+    formElement.addEventListener('submit', (e) => {
       e.preventDefault();
-      successMessage.style.display = 'block';
-      form.reset();
+      const successMessage = document.getElementById('formSuccessMessage');
+      if (successMessage) {
+        successMessage.textContent = "Lo sentimos, el servicio de formularios no está disponible en este momento. Por favor, inténtalo de nuevo más tarde.";
+        successMessage.style.display = 'block';
+        successMessage.style.color = 'var(--pomodoro)';
+      }
     });
   }
 });
