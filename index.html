@@ -7,6 +7,7 @@
     <title>MG</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.cal.com/embed.js" async></script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Salta al contenuto</a>
@@ -204,30 +205,29 @@
                 <a href="media-kit.pdf" class="btn btn--primary">Scarica il media kit</a>
                 <!-- TODO: añadir el PDF del media kit a la raíz del proyecto -->
 
-                <form action="#" class="collaborazioni__form" id="collaborazioniForm">
-                    <!-- TODO: sustituir por el endpoint de Formspree -->
+                <form class="collaborazioni__form" id="collaborazioniForm">
                     <div class="collaborazioni__form-group">
                         <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" required>
-                        <span class="form-error" id="nomeError"></span>
+                        <input type="text" id="nome" name="nome" data-fs-field required>
+                        <span data-fs-error="nome"></span>
                     </div>
                     <div class="collaborazioni__form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                        <span class="form-error" id="emailError"></span>
+                        <input type="email" id="email" name="email" data-fs-field required>
+                        <span data-fs-error="email"></span>
                     </div>
                     <div class="collaborazioni__form-group">
                         <label for="azienda">Azienda</label>
-                        <input type="text" id="azienda" name="azienda">
+                        <input type="text" id="azienda" name="azienda" data-fs-field>
                     </div>
                     <div class="collaborazioni__form-group">
                         <label for="messaggio">Messaggio</label>
-                        <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
-                        <span class="form-error" id="messaggioError"></span>
+                        <textarea id="messaggio" name="messaggio" rows="5" data-fs-field required></textarea>
+                        <span data-fs-error="messaggio"></span>
                     </div>
-                    <button type="submit" class="btn btn--primary">Invia</button>
+                    <button type="submit" data-fs-submit-btn class="btn btn--primary">Invia</button>
                 </form>
-                <div id="formSuccessMessage" style="display: none; margin-top: 1rem; color: var(--basilico); font-family: 'Caveat', cursive; font-size: var(--t-l);">
+                <div data-fs-success style="display: none; margin-top: 1rem; color: var(--basilico); font-family: 'Caveat', cursive; font-size: var(--t-l);">
                     Grazie! La funzione di invio sarà attiva a breve.
                 </div>
             </div>
