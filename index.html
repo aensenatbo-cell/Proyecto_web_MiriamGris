@@ -105,35 +105,161 @@
         </section>
 
         <section id="consigli">
-            <div class="wrap consigli__grid">
+            <div class="wrap">
                 <div class="consigli__header">
                     <h2>Consigli veloci</h2>
                     <p class="consigli__subtitle">Cinque minuti, zero perfezionismo.</p>
                 </div>
 
-                <div class="consiglio-card">
-                    <h3>Cucina</h3>
-                    <p>Comidas sanas ma reali, de las que se fanno tra semana.</p>
+                <div class="blog-filters">
+                    <button class="filter-btn active" data-filter="all">Tutti</button>
+                    <button class="filter-btn" data-filter="cucina">Cucina</button>
+                    <button class="filter-btn" data-filter="palestra">Palestra</button>
+                    <button class="filter-btn" data-filter="trucco">Trucco</button>
+                    <button class="filter-btn" data-filter="sonno">Sonno</button>
+                    <button class="filter-btn" data-filter="piccoli">Piccoli</button>
                 </div>
 
-                <div class="consiglio-card">
-                    <h3>Palestra a casa</h3>
-                    <p>Cardio y forza senza materiale y senza scuse.</p>
-                </div>
+                <div class="blog-grid">
+                    <!-- Cucina -->
+                    <article class="blog-card" data-category="cucina">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/cucina1/400/711" alt="Piatto di pasta semplice">
+                        </div>
+                        <h3>Pasta al pomodoro veloce</h3>
+                        <p>La ricetta che salvo quando non ho voglia di pensare. Tre ingredienti, dieci minuti.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
 
-                <div class="consiglio-card">
-                    <h3>Trucco</h3>
-                    <p>Rutinas de maquillaje che reggono un giorno normale.</p>
-                </div>
+                    <article class="blog-card" data-category="cucina">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/cucina2/400/711" alt="Insalata colorata">
+                        </div>
+                        <h3>Insalata che sembra più sana</h3>
+                        <p>Non è vero, ma ci provo. Con avocado e semi di zucca per dare l'illusione.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
 
-                <div class="consiglio-card">
-                    <h3>Sonno e calma</h3>
-                    <p>Iniciación a la meditazione y rutinas per dormire.</p>
-                </div>
+                    <article class="blog-card" data-category="cucina">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/cucina3/400/711" alt="Uova strapazzate">
+                        </div>
+                        <h3>Colazione da expat</h3>
+                        <p>Cosa mangio quando ho nostalgia dell'Italia ma vivo in Spagna. Uova strapazzate e pane tostato.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
 
-                <div class="consiglio-card">
-                    <h3>Con i piccoli</h3>
-                    <p>Juegos con recién nacidos hasta los dos años.</p>
+                    <!-- Palestra -->
+                    <article class="blog-card" data-category="palestra">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/palestra1/400/711" alt="Esercizio a corpo libero">
+                        </div>
+                        <h3>Cardio senza attrezzi</h3>
+                        <p>Dieci minuti per sudare in salotto. Nessuna scusa, nessun attrezzo.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
+
+                    <article class="blog-card" data-category="palestra">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/palestra2/400/711" alt="Stretching a terra">
+                        </div>
+                        <h3>Forza con il peso corporeo</h3>
+                        <p>Plank, affondi e squat. La palestra è dove ti metti tu.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
+
+                    <article class="blog-card" data-category="palestra">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/palestra3/400/711" alt="Esercizio di equilibrio">
+                        </div>
+                        <h3>Equilibrio e stabilità</h3>
+                        <p>Per quando le gambe tremano ma non vuoi arrenderti. Tre minuti di pura sofferenza.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
+
+                    <!-- Trucco -->
+                    <article class="blog-card" data-category="trucco">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/trucco1/400/711" alt="Routine di trucco veloce">
+                        </div>
+                        <h3>Trucco per chi ha fretta</h3>
+                        <p>Cinque minuti per sembrare sveglia. Mascara, rossetto e poco altro.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
+
+                    <article class="blog-card" data-category="trucco">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/trucco2/400/711" alt="Prodotto di trucco">
+                        </div>
+                        <h3>Il prodotto che non abbandono</h3>
+                        <p>Non è costoso, ma funziona. Lo uso ogni giorno da anni.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
+
+                    <article class="blog-card" data-category="trucco">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/trucco3/400/711" alt="Specchio con trucco">
+                        </div>
+                        <h3>Contorno che non sembra maschera</h3>
+                        <p>Il segreto è poco prodotto e tanta pazienza. O almeno ci provo.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
+
+                    <!-- Sonno -->
+                    <article class="blog-card" data-category="sonno">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/sonno1/400/711" alt="Camera da letto rilassante">
+                        </div>
+                        <h3>Rituali per dormire meglio</h3>
+                        <p>Niente schermi un'ora prima. Leggere un libro e respirare profondamente.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
+
+                    <article class="blog-card" data-category="sonno">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/sonno2/400/711" alt="Candela accesa">
+                        </div>
+                        <h3>Meditazione per principianti</h3>
+                        <p>Non so meditare, ma provo. Cinque minuti di silenzio valgono più di mille parole.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
+
+                    <article class="blog-card" data-category="sonno">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/sonno3/400/711" alt="Tazza di tè">
+                        </div>
+                        <h3>Tè e relax serale</h3>
+                        <p>La mia routine per staccare la spina. Tè alla camomilla e zero pensieri.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
+
+                    <!-- Piccoli -->
+                    <article class="blog-card" data-category="piccoli">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/piccoli1/400/711" alt="Gioco con neonato">
+                        </div>
+                        <h3>Giocare con i neonati</h3>
+                        <p>Cose semplici che funzionano: specchi, tessuti e tanto sorriso.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
+
+                    <article class="blog-card" data-category="piccoli">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/piccoli2/400/711" alt="Giocattolo semplice">
+                        </div>
+                        <h3>Giocattoli che non costano nulla</h3>
+                        <p>Scatole di cartone, palle di carta e fantasia. I migliori giochi sono quelli semplici.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
+
+                    <article class="blog-card" data-category="piccoli">
+                        <div class="blog-card__image">
+                            <img src="https://picsum.photos/seed/piccoli3/400/711" alt="Bambino che ride">
+                        </div>
+                        <h3>Rituali per i piccoli</h3>
+                        <p>Cose da fare con bambini da zero a due anni. Niente di complicato, solo presenza.</p>
+                        <a href="#" class="blog-card__link">Leggi di più</a>
+                    </article>
                 </div>
                 <span class="nota">cinque minuti è ottimista.</span>
             </div>
