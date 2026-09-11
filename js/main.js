@@ -109,13 +109,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  // Cal.com Embed
-  const calContainer = document.getElementById('cal-inline');
-  if (calContainer && typeof Cal === 'function') {
-    Cal('inline', {
-      elementOrSelector: '#cal-inline',
-      calLink: 'miriam-grisonich', // Cambia esto por tu enlace real de Cal.com
-    });
-  }
 });

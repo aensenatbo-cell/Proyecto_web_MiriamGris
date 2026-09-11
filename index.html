@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Cal.com Embed Script -->
     <script type="text/javascript">
-      (function(C,a,l,i,o,s){C[a]=C[a]||function(){(C[a].q=C[a].q||[]).push(arguments)};
-      s=a.createElement("script");s.async=1;s.src="https://assets.cal.com/js/embed.umd.js";
-      i=a.getElementsByTagName("script")[0];i.parentNode.insertBefore(s,i);
-      })(window,"Cal",document);
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "30min", {origin:"https://app.cal.com"});
+      Cal.config = Cal.config || {};
+      Cal.config.forwardQueryParams = true;
     </script>
 </head>
 <body>
@@ -185,9 +185,19 @@
                 <h2>Prenota un caffè virtuale</h2>
                 <p>Una conversazione di trenta minuti per parlare di trasferta in Spagna, routine o qualsiasi altra cosa serva. Zero fretta, zero giudizi.</p>
                 
-                <div id="cal-inline" class="prenota-block">
-                    <!-- Cal.com embed will be injected here -->
-                </div>
+                <!-- Cal inline embed code begins -->
+                <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30min"></div>
+                <script type="text/javascript">
+                  Cal.ns["30min"]("inline", {
+                    elementOrSelector:"#my-cal-inline-30min",
+                    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+                    calLink: "miriam-grisonich/30min",
+                  });
+
+                  Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+                </script>
+                <!-- Cal inline embed code ends -->
+                
                 <span class="nota">il caffè è virtuale, il mio è reale.</span>
             </div>
         </section>
