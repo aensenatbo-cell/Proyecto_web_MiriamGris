@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vlog settimanali su come provare a essere un'adulta funzionante, senza riuscirci del tutto. Consigli su cucina, palestra, trucco e vita da expat a Barcellona.">
     <title>MG</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -198,15 +199,17 @@
                 <a href="media-kit.pdf" class="btn btn--primary">Scarica il media kit</a>
                 <!-- TODO: añadir el PDF del media kit a la raíz del proyecto -->
 
-                <form action="#" class="collaborazioni__form">
+                <form action="#" class="collaborazioni__form" id="collaborazioniForm">
                     <!-- TODO: sustituir por el endpoint de Formspree -->
                     <div class="collaborazioni__form-group">
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" name="nome" required>
+                        <span class="form-error" id="nomeError"></span>
                     </div>
                     <div class="collaborazioni__form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
+                        <span class="form-error" id="emailError"></span>
                     </div>
                     <div class="collaborazioni__form-group">
                         <label for="azienda">Azienda</label>
@@ -215,9 +218,13 @@
                     <div class="collaborazioni__form-group">
                         <label for="messaggio">Messaggio</label>
                         <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+                        <span class="form-error" id="messaggioError"></span>
                     </div>
                     <button type="submit" class="btn btn--primary">Invia</button>
                 </form>
+                <div id="formSuccessMessage" style="display: none; margin-top: 1rem; color: var(--basilico); font-family: 'Caveat', cursive; font-size: var(--t-l);">
+                    Grazie! La funzione di invio sarà attiva a breve.
+                </div>
             </div>
         </section>
     </main>

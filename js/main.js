@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Active link highlighting
+  // Active link highlighting using IntersectionObserver
   const sections = document.querySelectorAll('section[id]');
   
   const observerOptions = {
@@ -44,4 +44,51 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(section => {
     observer.observe(section);
   });
+
+  // Form validation for #collaborazioni
+  const form = document.getElementById('collaborazioniForm');
+  const nomeInput = document.getElementById('nome');
+  const emailInput = document.getElementById('email');
+  const messaggioInput = document.getElementById('messaggio');
+  const nomeError = document.getElementById('nomeError');
+  const emailError = document.getElementById('emailError');
+  const messaggioError = document.getElementById('messaggioError');
+  const successMessage = document.getElementById('formSuccessMessage');
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let isValid = true;
+
+      // Reset errors
+      nomeError.textContent = '';
+      emailError.textContent = '';
+      messaggioError.textContent = '';
+      successMessage.style.display = 'none';
+
+      // Validate nome
+      if (!nomeInput.value.trim()) {
+        nomeError.textContent = 'Il nome è obbligatorio.';
+        isValid = false;
+      }
+
+      // Validate email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value.trim())) {
+        emailError.textContent = 'Inserisci un\'email valida.';
+        isValid = false;
+      }
+
+      // Validate messaggio
+      if (!messaggioInput.value.trim()) {
+        messaggioError.textContent = 'Il messaggio è obbligatorio.';
+        isValid = false;
+      }
+
+      if (isValid) {
+        successMessage.style.display = 'block';
+        form.reset();
+      }
+    });
+  }
 });

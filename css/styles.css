@@ -292,7 +292,7 @@ section {
 .chi-sono__content p {
   font-size: var(--t-m);
   margin-bottom: 1.5rem;
-  max-width: 45ch; /* Ancho de línea por debajo de 70 caracteres */
+  max-width: 70ch;
 }
 
 /* Avventure Section */
@@ -541,6 +541,12 @@ section {
 
 .collaborazioni__form-group textarea {
   resize: vertical;
+}
+
+.form-error {
+  color: var(--pomodoro);
+  font-size: var(--t-xs);
+  min-height: 1.2em;
 }
 
 /* Footer */
