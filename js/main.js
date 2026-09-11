@@ -91,4 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Initialize Cal.com embed
+  const calEmbed = document.getElementById('cal-embed');
+  if (calEmbed && window.Cal) {
+    window.Cal('init', { origin: 'https://cal.com' });
+    window.Cal('embed', {
+      calLink: 'amador-ensenat-miriam-grisonich-ve3fgl/30min',
+      calEmbedContainer: '#cal-embed',
+    });
+  }
 });
